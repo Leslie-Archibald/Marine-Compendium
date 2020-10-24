@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EEAD6A1-DA82-4656-BDB7-C4552D9886E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MarineCompendiumBeta.My.MyApplication</StartupObject>
+    <RootNamespace>MarineCompendiumBeta</RootNamespace>
+    <AssemblyName>MarineCompendiumBeta</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MarineCompendiumBeta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MarineCompendiumBeta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractSources.Designer.vb">
+      <DependentUpon>AbstractSources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AbstractSources.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrayStorage.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AbstractSources.resx">
+      <DependentUpon>AbstractSources.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vampireSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colossalSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\antarcticToothfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argonaut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandedButterflyfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belugaWhale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bioluminescentOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackSeaNettle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blanketOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluefaceAngelfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluefinTuna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueRingedOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueTang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueWhale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottlenoseDolphin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\californiaSeaLion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chamberedNautilus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coelacanth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonBrittleStar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonClownfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonCuttlefish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonDolphin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonSeaUrchin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commonStarfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crystalJelly.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumboOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elegantFirefish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireflySquid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireGoby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flameAngelfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flamboyantCuttlefish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flowerHatJelly.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frenchAngelfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frilledShark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuzzyNautilus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giantCuttlefish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giantPacificOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giantSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grayWhale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greatHammerhead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greatWhiteShark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenlandShark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenSeaTurtle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grimaldiSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harpSeal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humboldtSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humpheadWrasse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\immortalJellyfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indoPacificSailfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\johnDory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpEagleRay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leafySeaDragon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leatherbackSeaTurtle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leopardSeal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linedButterflyfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lobster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mahiMahi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manatee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mandarinFish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mantaRay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mimicOctopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minkeWhale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkSeal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morayEel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\narwhal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neonFlyingSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurseShark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oceanSunfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacificWhiteSidedDolphin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palauNautilus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peacockMantisShrimp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelicanEel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pistolShrimp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portugueseManOWar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queenAngelfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redKingCrab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redLionfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reefStarfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regalAngelfish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regalTang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbonEel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rissosDolphin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seahorse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheepsheadWrasse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shortTailStingray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spectacledPorpoise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spottedRay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stellerSeaLion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stripedGoby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stripedPJSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tigerShark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\umbrellaSquid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walrus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitePatchedNautilus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowfinTuna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowTang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yetiCrab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelagicThresherShark.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
